@@ -5,15 +5,15 @@
 /**
  * Tabular Categories
  *
- * @author emanuele
- * @license   BSD http://opensource.org/licenses/BSD-3-Clause
+ * @author  emanuele
+ * @license BSD http://opensource.org/licenses/BSD-3-Clause
  *
- * @version 0.0.1
+ * @version 0.0.2
  */
 	]]></license>
 	<id>emanuele:tabular_categories</id>
 	<name>Tabular Categories</name>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<type>modification</type>
 	<install for="1.0 - 1.0.99">
 		<require-file name="TabularCategories.subs.php" destination="SUBSDIR" />
