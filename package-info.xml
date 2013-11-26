@@ -19,12 +19,12 @@
 		<require-file name="TabularCategories.subs.php" destination="SUBSDIR" />
 		<require-file name="TabularCategories.template.php" destination="$themedir" />
 		<require-file name="TabularCategories.css" destination="$themedir/css" />
-		<hook hook="integrate_mark_read_button" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
+		<hook hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
 	</install>
 	<uninstall for="1.0 - 1.0.99">
 		<remove-file name="SUBSDIR/TabularCategories.subs.php" />
 		<remove-file name="$themedir/TabularCategories.template.php" />
 		<remove-file name="$themedir/css/TabularCategories.css" />
-		<hook reverse="true" hook="integrate_mark_read_button" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
+		<hook reverse="true" hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
 	</uninstall>
 </package-info>
