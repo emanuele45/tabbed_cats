@@ -1,23 +1,11 @@
 #tabular_cats li {
 	float: left;
-	padding: 0.5em 0 0 0.5em;
+	padding: 0 0.5em; /* 0 0 0.5em;*/
+	border-right: 1px solid #CCCCCC;
 }
-#tabular_cats li a {
-	padding: 0.2em;
-	background: url(../images/theme/lower_section.png) 0px 0px repeat-x #EFEFEF;
-	border: 1px solid #CCCCCC;
-	border-radius: 2px;
-	font-weight: 400;
+#tabular_cats {
+	padding: 0;
 }
 #tabular_cats li.active a {
 	font-weight: 700;
-}
-#tabular_cats ul {
-	margin-top: -0.5em;
-}
-#tabular_cats ul:first-child {
-	margin-left: -0.5em;
-}
-#tabular_cats h3 {
-	height: auto;
 }
