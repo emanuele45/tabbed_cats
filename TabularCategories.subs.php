@@ -19,11 +19,19 @@
  */
 function tabular_categories()
 {
-	global $context;
+	global $context, $modSettings;
 
 	loadTemplate('TabularCategories');
 	Template_Layers::getInstance()->addEnd('tabular_categories');
 
 	$current_cat = current($context['categories']);
 	loadCSSFile('TabularCategories.css');
+
+	$context['show_side'] = !empty($modSettings['tabcats_toggle_side']);
+}
+
+function tabular_categories_setting(&$config_vars)
+{
+	loadLanguage('TabularCategories');
+	$config_vars[] = array('check', 'tabcats_toggle_side');
 }

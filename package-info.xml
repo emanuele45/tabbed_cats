@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
-<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
 	<license><![CDATA[
 /**
  * Tabular Categories
@@ -17,14 +17,18 @@
 	<type>modification</type>
 	<install for="1.0 - 1.0.99">
 		<require-file name="TabularCategories.subs.php" destination="SUBSDIR" />
-		<require-file name="TabularCategories.template.php" destination="$themedir" />
-		<require-file name="TabularCategories.css" destination="$themedir/css" />
+		<require-file name="TabularCategories.template.php" destination="THEMEDIR" />
+		<require-file name="TabularCategories.css" destination="THEMEDIR/css" />
+		<require-file name="TabularCategories.english.php" destination="THEMEDIR/langauges/english" />
 		<hook hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
+		<hook hook="  integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
 	</install>
 	<uninstall for="1.0 - 1.0.99">
 		<remove-file name="SUBSDIR/TabularCategories.subs.php" />
-		<remove-file name="$themedir/TabularCategories.template.php" />
-		<remove-file name="$themedir/css/TabularCategories.css" />
+		<remove-file name="THEMEDIR/TabularCategories.template.php" />
+		<remove-file name="THEMEDIR/css/TabularCategories.css" />
+		<remove-file name="THEMEDIR/langauges/english/TabularCategories.english.php" />
 		<hook reverse="true" hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
+		<hook reverse="true" hook="  integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
 	</uninstall>
 </package-info>
