@@ -8,12 +8,12 @@
  * @author  emanuele
  * @license BSD http://opensource.org/licenses/BSD-3-Clause
  *
- * @version 0.0.2
+ * @version 0.0.3
  */
 	]]></license>
 	<id>emanuele:tabular_categories</id>
 	<name>Tabular Categories</name>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<type>modification</type>
 	<install for="1.0 - 1.0.99">
 		<require-file name="TabularCategories.subs.php" destination="SUBSDIR" />
@@ -21,7 +21,7 @@
 		<require-file name="TabularCategories.css" destination="THEMEDIR/css" />
 		<require-file name="TabularCategories.english.php" destination="THEMEDIR/langauges/english" />
 		<hook hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
-		<hook hook="  integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
+		<hook hook="integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
 	</install>
 	<uninstall for="1.0 - 1.0.99">
 		<remove-file name="SUBSDIR/TabularCategories.subs.php" />
@@ -29,6 +29,6 @@
 		<remove-file name="THEMEDIR/css/TabularCategories.css" />
 		<remove-file name="THEMEDIR/langauges/english/TabularCategories.english.php" />
 		<hook reverse="true" hook="integrate_action_boardindex_after" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories" />
-		<hook reverse="true" hook="  integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
+		<hook reverse="true" hook="integrate_general_mod_settings" file="SOURCEDIR/subs/TabularCategories.subs.php" function="tabular_categories_setting" />
 	</uninstall>
 </package-info>
